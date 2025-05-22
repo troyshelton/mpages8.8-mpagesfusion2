@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>MPages</title>
+        <style>
+            .hljs {
+                display: block;
+                overflow-x: auto;
+                padding: 0.5em;
+                color: #000;
+                background: #fff;
+            }
+            .hljs-subst,
+            .hljs-title {
+                font-weight: 400;
+                color: #000;
+            }
+            .hljs-comment,
+            .hljs-quote {
+                color: grey;
+                font-style: italic;
+            }
+            .hljs-meta {
+                color: olive;
+            }
+            .hljs-tag {
+                background: #efefef;
+            }
+            .hljs-keyword,
+            .hljs-literal,
+            .hljs-name,
+            .hljs-section,
+            .hljs-selector-class,
+            .hljs-selector-id,
+            .hljs-selector-tag,
+            .hljs-type {
+                font-weight: 700;
+                color: navy;
+            }
+            .hljs-attribute,
+            .hljs-link,
+            .hljs-number,
+            .hljs-regexp {
+                font-weight: 700;
+                color: #00f;
+            }
+            .hljs-link,
+            .hljs-number,
+            .hljs-regexp {
+                font-weight: 400;
+            }
+            .hljs-string {
+                color: green;
+                font-weight: 700;
+            }
+            .hljs-bullet,
+            .hljs-formula,
+            .hljs-symbol {
+                color: #000;
+                background: #d0eded;
+                font-style: italic;
+            }
+            .hljs-doctag {
+                text-decoration: underline;
+            }
+            .hljs-template-variable,
+            .hljs-variable {
+                color: #660e7a;
+            }
+            .hljs-addition {
+                background: #baeeba;
+            }
+            .hljs-deletion {
+                background: #ffc8bd;
+            }
+            .hljs-emphasis {
+                font-style: italic;
+            }
+            .hljs-strong {
+                font-weight: 700;
+            }
+            .setup-markdown {
+                padding: 1rem;
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                line-height: 1.5;
+                color: #24292e;
+                font-family: -apple-system, system-ui, BlinkMacSystemFont,
+                    "Segoe UI", Helvetica, Arial, sans-serif,
+                    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                font-size: 16px;
+                word-wrap: break-word;
+            }
+            .setup-markdown .pl-c {
+                color: #969896;
+            }
+            .setup-markdown .pl-c1,
+            .setup-markdown .pl-s .pl-v {
+                color: #0086b3;
+            }
+            .setup-markdown .pl-e,
+            .setup-markdown .pl-en {
+                color: #795da3;
+            }
+            .setup-markdown .pl-s .pl-s1,
+            .setup-markdown .pl-smi {
+                color: #333;
+            }
+            .setup-markdown .pl-ent {
+                color: #63a35c;
+            }
+            .setup-markdown .pl-k {
+                color: #a71d5d;
+            }
+            .setup-markdown .pl-pds,
+            .setup-markdown .pl-s,
+            .setup-markdown .pl-s .pl-pse .pl-s1,
+            .setup-markdown .pl-sr,
+            .setup-markdown .pl-sr .pl-cce,
+            .setup-markdown .pl-sr .pl-sra,
+            .setup-markdown .pl-sr .pl-sre {
+                color: #183691;
+            }
+            .setup-markdown .pl-smw,
+            .setup-markdown .pl-v {
+                color: #ed6a43;
+            }
+            .setup-markdown .pl-bu {
+                color: #b52a1d;
+            }
+            .setup-markdown .pl-ii {
+                color: #f8f8f8;
+                background-color: #b52a1d;
+            }
+            .setup-markdown .pl-c2 {
+                color: #f8f8f8;
+                background-color: #b52a1d;
+            }
+            .setup-markdown .pl-c2::before {
+                content: "^M";
+            }
+            .setup-markdown .pl-sr .pl-cce {
+                font-weight: 700;
+                color: #63a35c;
+            }
+            .setup-markdown .pl-ml {
+                color: #693a17;
+            }
+            .setup-markdown .pl-mh,
+            .setup-markdown .pl-mh .pl-en,
+            .setup-markdown .pl-ms {
+                font-weight: 700;
+                color: #1d3e81;
+            }
+            .setup-markdown .pl-mq {
+                color: teal;
+            }
+            .setup-markdown .pl-mi {
+                font-style: italic;
+                color: #333;
+            }
+            .setup-markdown .pl-mb {
+                font-weight: 700;
+                color: #333;
+            }
+            .setup-markdown .pl-md {
+                color: #bd2c00;
+                background-color: #ffecec;
+            }
+            .setup-markdown .pl-mi1 {
+                color: #55a532;
+                background-color: #eaffea;
+            }
+            .setup-markdown .pl-mc {
+                color: #ef9700;
+                background-color: #ffe3b4;
+            }
+            .setup-markdown .pl-mi2 {
+                color: #d8d8d8;
+                background-color: grey;
+            }
+            .setup-markdown .pl-mdr {
+                font-weight: 700;
+                color: #795da3;
+            }
+            .setup-markdown .pl-mo {
+                color: #1d3e81;
+            }
+            .setup-markdown .pl-ba {
+                color: #595e62;
+            }
+            .setup-markdown .pl-sg {
+                color: silver;
+            }
+            .setup-markdown .pl-corl {
+                text-decoration: underline;
+                color: #183691;
+            }
+            .setup-markdown .octicon {
+                display: inline-block;
+                vertical-align: text-top;
+                fill: currentColor;
+            }
+            .setup-markdown a {
+                background-color: transparent;
+                -webkit-text-decoration-skip: objects;
+            }
+            .setup-markdown a:active,
+            .setup-markdown a:hover {
+                outline-width: 0;
+            }
+            .setup-markdown strong {
+                font-weight: inherit;
+            }
+            .setup-markdown strong {
+                font-weight: bolder;
+            }
+            .setup-markdown h1 {
+                font-size: 2em;
+                margin: 0.67em 0;
+            }
+            .setup-markdown img {
+                border-style: none;
+            }
+            .setup-markdown svg:not(:root) {
+                overflow: hidden;
+            }
+            .setup-markdown code,
+            .setup-markdown kbd,
+            .setup-markdown pre {
+                font-family: monospace, monospace;
+                font-size: 1em;
+            }
+            .setup-markdown hr {
+                box-sizing: content-box;
+                height: 0;
+                overflow: visible;
+            }
+            .setup-markdown input {
+                font: inherit;
+                margin: 0;
+            }
+            .setup-markdown input {
+                overflow: visible;
+            }
+            .setup-markdown [type="checkbox"] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+            .setup-markdown * {
+                box-sizing: border-box;
+            }
+            .setup-markdown input {
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+            .setup-markdown a {
+                color: #0366d6;
+                text-decoration: none;
+            }
+            .setup-markdown a:hover {
+                text-decoration: underline;
+            }
+            .setup-markdown strong {
+                font-weight: 600;
+            }
+            .setup-markdown hr {
+                height: 0;
+                margin: 15px 0;
+                overflow: hidden;
+                background: 0 0;
+                border: 0;
+                border-bottom: 1px solid #dfe2e5;
+            }
+            .setup-markdown hr::before {
+                display: table;
+                content: "";
+            }
+            .setup-markdown hr::after {
+                display: table;
+                clear: both;
+                content: "";
+            }
+            .setup-markdown table {
+                border-spacing: 0;
+                border-collapse: collapse;
+            }
+            .setup-markdown td,
+            .setup-markdown th {
+                padding: 0;
+            }
+            .setup-markdown h1,
+            .setup-markdown h2,
+            .setup-markdown h3,
+            .setup-markdown h4,
+            .setup-markdown h5,
+            .setup-markdown h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .setup-markdown h1 {
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .setup-markdown h2 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .setup-markdown h3 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+            .setup-markdown h4 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .setup-markdown h5 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .setup-markdown h6 {
+                font-size: 12px;
+                font-weight: 600;
+            }
+            .setup-markdown p {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .setup-markdown blockquote {
+                margin: 0;
+            }
+            .setup-markdown ol,
+            .setup-markdown ul {
+                padding-left: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .setup-markdown ol ol,
+            .setup-markdown ul ol {
+                list-style-type: lower-roman;
+            }
+            .setup-markdown ol ol ol,
+            .setup-markdown ol ul ol,
+            .setup-markdown ul ol ol,
+            .setup-markdown ul ul ol {
+                list-style-type: lower-alpha;
+            }
+            .setup-markdown dd {
+                margin-left: 0;
+            }
+            .setup-markdown code {
+                font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+                    Courier, monospace;
+                font-size: 12px;
+            }
+            .setup-markdown pre {
+                margin-top: 0;
+                margin-bottom: 0;
+                font: 12px SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+                    Courier, monospace;
+            }
+            .setup-markdown .octicon {
+                vertical-align: text-bottom;
+            }
+            .setup-markdown .pl-0 {
+                padding-left: 0 !important;
+            }
+            .setup-markdown .pl-1 {
+                padding-left: 4px !important;
+            }
+            .setup-markdown .pl-2 {
+                padding-left: 8px !important;
+            }
+            .setup-markdown .pl-3 {
+                padding-left: 16px !important;
+            }
+            .setup-markdown .pl-4 {
+                padding-left: 24px !important;
+            }
+            .setup-markdown .pl-5 {
+                padding-left: 32px !important;
+            }
+            .setup-markdown .pl-6 {
+                padding-left: 40px !important;
+            }
+            .setup-markdown::before {
+                display: table;
+                content: "";
+            }
+            .setup-markdown::after {
+                display: table;
+                clear: both;
+                content: "";
+            }
+            .setup-markdown > :first-child {
+                margin-top: 0 !important;
+            }
+            .setup-markdown > :last-child {
+                margin-bottom: 0 !important;
+            }
+            .setup-markdown a:not([href]) {
+                color: inherit;
+                text-decoration: none;
+            }
+            .setup-markdown .anchor {
+                float: left;
+                padding-right: 4px;
+                margin-left: -20px;
+                line-height: 1;
+            }
+            .setup-markdown .anchor:focus {
+                outline: 0;
+            }
+            .setup-markdown blockquote,
+            .setup-markdown dl,
+            .setup-markdown ol,
+            .setup-markdown p,
+            .setup-markdown pre,
+            .setup-markdown table,
+            .setup-markdown ul {
+                margin-top: 0;
+                margin-bottom: 16px;
+            }
+            .setup-markdown hr {
+                height: 0.25em;
+                padding: 0;
+                margin: 24px 0;
+                background-color: #e1e4e8;
+                border: 0;
+            }
+            .setup-markdown blockquote {
+                padding: 0 1em;
+                color: #6a737d;
+                border-left: 0.25em solid #dfe2e5;
+            }
+            .setup-markdown blockquote > :first-child {
+                margin-top: 0;
+            }
+            .setup-markdown blockquote > :last-child {
+                margin-bottom: 0;
+            }
+            .setup-markdown kbd {
+                display: inline-block;
+                padding: 3px 5px;
+                font-size: 11px;
+                line-height: 10px;
+                color: #444d56;
+                vertical-align: middle;
+                background-color: #fafbfc;
+                border: solid 1px #c6cbd1;
+                border-bottom-color: #959da5;
+                border-radius: 3px;
+                box-shadow: inset 0 -1px 0 #959da5;
+            }
+            .setup-markdown h1,
+            .setup-markdown h2,
+            .setup-markdown h3,
+            .setup-markdown h4,
+            .setup-markdown h5,
+            .setup-markdown h6 {
+                margin-top: 24px;
+                margin-bottom: 16px;
+                font-weight: 600;
+                line-height: 1.25;
+            }
+            .setup-markdown h1 .octicon-link,
+            .setup-markdown h2 .octicon-link,
+            .setup-markdown h3 .octicon-link,
+            .setup-markdown h4 .octicon-link,
+            .setup-markdown h5 .octicon-link,
+            .setup-markdown h6 .octicon-link {
+                color: #1b1f23;
+                vertical-align: middle;
+                visibility: hidden;
+            }
+            .setup-markdown h1:hover .anchor,
+            .setup-markdown h2:hover .anchor,
+            .setup-markdown h3:hover .anchor,
+            .setup-markdown h4:hover .anchor,
+            .setup-markdown h5:hover .anchor,
+            .setup-markdown h6:hover .anchor {
+                text-decoration: none;
+            }
+            .setup-markdown h1:hover .anchor .octicon-link,
+            .setup-markdown h2:hover .anchor .octicon-link,
+            .setup-markdown h3:hover .anchor .octicon-link,
+            .setup-markdown h4:hover .anchor .octicon-link,
+            .setup-markdown h5:hover .anchor .octicon-link,
+            .setup-markdown h6:hover .anchor .octicon-link {
+                visibility: visible;
+            }
+            .setup-markdown h1 {
+                padding-bottom: 0.3em;
+                font-size: 2em;
+                border-bottom: 1px solid #eaecef;
+            }
+            .setup-markdown h2 {
+                padding-bottom: 0.3em;
+                font-size: 1.5em;
+                border-bottom: 1px solid #eaecef;
+            }
+            .setup-markdown h3 {
+                font-size: 1.25em;
+            }
+            .setup-markdown h4 {
+                font-size: 1em;
+            }
+            .setup-markdown h5 {
+                font-size: 0.875em;
+            }
+            .setup-markdown h6 {
+                font-size: 0.85em;
+                color: #6a737d;
+            }
+            .setup-markdown ol,
+            .setup-markdown ul {
+                padding-left: 2em;
+            }
+            .setup-markdown ol ol,
+            .setup-markdown ol ul,
+            .setup-markdown ul ol,
+            .setup-markdown ul ul {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .setup-markdown li > p {
+                margin-top: 16px;
+            }
+            .setup-markdown li + li {
+                margin-top: 0.25em;
+            }
+            .setup-markdown dl {
+                padding: 0;
+            }
+            .setup-markdown dl dt {
+                padding: 0;
+                margin-top: 16px;
+                font-size: 1em;
+                font-style: italic;
+                font-weight: 600;
+            }
+            .setup-markdown dl dd {
+                padding: 0 16px;
+                margin-bottom: 16px;
+            }
+            .setup-markdown table {
+                display: block;
+                width: 100%;
+                overflow: auto;
+            }
+            .setup-markdown table th {
+                font-weight: 600;
+            }
+            .setup-markdown table td,
+            .setup-markdown table th {
+                padding: 6px 13px;
+                border: 1px solid #dfe2e5;
+            }
+            .setup-markdown table tr {
+                background-color: #fff;
+                border-top: 1px solid #c6cbd1;
+            }
+            .setup-markdown table tr:nth-child(2n) {
+                background-color: #f6f8fa;
+            }
+            .setup-markdown img {
+                max-width: 100%;
+                box-sizing: content-box;
+                background-color: #fff;
+            }
+            .setup-markdown code {
+                padding: 0;
+                padding-top: 0.2em;
+                padding-bottom: 0.2em;
+                margin: 0;
+                font-size: 85%;
+                background-color: rgba(27, 31, 35, 0.05);
+                border-radius: 3px;
+            }
+            .setup-markdown code::after,
+            .setup-markdown code::before {
+                letter-spacing: -0.2em;
+                content: "\00a0";
+            }
+            .setup-markdown pre {
+                word-wrap: normal;
+            }
+            .setup-markdown pre > code {
+                padding: 0;
+                margin: 0;
+                font-size: 100%;
+                word-break: normal;
+                white-space: pre;
+                background: 0 0;
+                border: 0;
+            }
+            .setup-markdown .highlight {
+                margin-bottom: 16px;
+            }
+            .setup-markdown .highlight pre {
+                margin-bottom: 0;
+                word-break: normal;
+            }
+            .setup-markdown .highlight pre,
+            .setup-markdown pre {
+                padding: 16px;
+                overflow: auto;
+                font-size: 85%;
+                line-height: 1.45;
+                background-color: #f6f8fa;
+                border-radius: 3px;
+            }
+            .setup-markdown pre code {
+                display: inline;
+                max-width: auto;
+                padding: 0;
+                margin: 0;
+                overflow: visible;
+                line-height: inherit;
+                word-wrap: normal;
+                background-color: transparent;
+                border: 0;
+            }
+            .setup-markdown pre code::after,
+            .setup-markdown pre code::before {
+                content: normal;
+            }
+            .setup-markdown .full-commit .btn-outline:not(:disabled):hover {
+                color: #005cc5;
+                border-color: #005cc5;
+            }
+            .setup-markdown kbd {
+                display: inline-block;
+                padding: 3px 5px;
+                font: 11px SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+                    Courier, monospace;
+                line-height: 10px;
+                color: #444d56;
+                vertical-align: middle;
+                background-color: #fcfcfc;
+                border: solid 1px #c6cbd1;
+                border-bottom-color: #959da5;
+                border-radius: 3px;
+                box-shadow: inset 0 -1px 0 #959da5;
+            }
+            .setup-markdown :checked + .radio-label {
+                position: relative;
+                z-index: 1;
+                border-color: #0366d6;
+            }
+            .setup-markdown .task-list-item {
+                list-style-type: none;
+            }
+            .setup-markdown .task-list-item + .task-list-item {
+                margin-top: 3px;
+            }
+            .setup-markdown .task-list-item input {
+                margin: 0 0.2em 0.25em -1.6em;
+                vertical-align: middle;
+            }
+            .setup-markdown hr {
+                border-bottom-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root" class="setup-markdown">
+            <h1 id="mpages-fusion-custom-component-setup">
+                MPages Fusion Custom Component Setup
+            </h1>
+            <h2 id="prerequisites">Prerequisites</h2>
+            <p>
+                The project works with <em>MPages</em> Gaia. See
+                <a
+                    href="https://wiki.ucern.com/display/public/reference/Overview+of+MPages+Gaia"
+                    >Overview of <em>MPages</em> Gaia</a
+                >
+                for more information.
+            </p>
+            <p>
+                Ensure that the following prerequisites are met before you begin
+                configuring this functionality:
+            </p>
+            <ul>
+                <li>
+                    Obtain a <code>TOKEN_ID</code> for downloading
+                    <em>MPages</em> Gaia and its plugins. Log a Service Request
+                    to obtain an <em>MPages</em> Gaia token and the associated
+                    <em>MPages</em> Gaia URLs. See
+                    <a
+                        href="https://wiki.ucern.com/display/public/eServiceHP/eService+Help+Pages"
+                        >eService Help Pages</a
+                    >
+                    for more information on creating a Service Request.
+                </li>
+                <li>
+                    Add the <code>TOKEN_ID</code> in the
+                    <code>package.json</code> file.
+                </li>
+                <li>Run <code>npm install</code>.</li>
+            </ul>
+            <p>
+                <em>MPages</em> Gaia is preconfigured in the template. See
+                <a
+                    href="https://wiki.cerner.com/pages/releaseview.action?spaceKey=reference&amp;title=Install+MPages+Gaia"
+                    >Install <em>MPages</em> Gaia</a
+                >
+                for more information.
+            </p>
+            <h3 id="bedrock-and-static-content-prerequisites">
+                <em>Bedrock</em> and Static Content Prerequisites
+            </h3>
+            <p>
+                Review the following pages for information on configuring custom
+                components:
+            </p>
+            <ul>
+                <li>
+                    <a
+                        href="https://wiki.ucern.com/pages/releaseview.action?pageId=1298729365"
+                        >Configure Custom Workflow Components</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://wiki.cerner.com/display/public/reference/Configure+Component+or+Column+Settings+for+MPages+Views"
+                        >Configure Component Settings for
+                        <em>MPages</em> Views</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://wiki.cerner.com/display/public/reference/Understand+Custom+MPages+Component+Content"
+                        >Understand Custom <em>MPages</em> Component Content</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://wiki.cerner.com/display/public/reference/Configure+MPages+Static+Content+Enterprise+Appliance"
+                        >Configure <em>MPages</em> Static Content Enterprise
+                        Appliance</a
+                    >
+                </li>
+            </ul>
+            <h2 id="bedrock-configuration"><em>Bedrock</em> Configuration</h2>
+            <h3 id="install-the-bedrock-filters">
+                Install the <em>Bedrock</em> Filters
+            </h3>
+            <p>
+                You must install the <em>Bedrock</em> filters that provide 10
+                custom component filter means that are compatible with the
+                Fusion custom component API. This only needs to be completed
+                once per domain.
+            </p>
+            <p>
+                Complete the following steps to install the
+                <em>Bedrock</em> filters:
+            </p>
+            <ol>
+                <li>
+                    Copy the .CSV files within <code>bedrock/csv/</code> into
+                    your domain. Typically, this is in this location:
+                    <code>/cerner/w_standard/&lt;domain&gt;/install</code>.
+                </li>
+                <li>Confirm the contents are copied.</li>
+                <li>
+                    In a CCL backend command prompt, compile and run the custom
+                    component script
+                    <code>br_run_wf_fusion_custom_comp.prg</code> within
+                    <code>bedrock/script/</code> using the following command:
+                </li>
+            </ol>
+            <pre><code class="hljs text"><span class="hljs-keyword">execute</span> br_run_wf_fusion_custom_comp <span class="hljs-keyword">go</span></code></pre>
+            <h3 id="configure-the-bedrock-filters">
+                Configure the <em>Bedrock</em> Filters
+            </h3>
+            <p>
+                After importing the <em>Bedrock</em> filters, complete the
+                following steps to configure the <em>MPages</em> View.
+            </p>
+            <ol>
+                <li>
+                    In <em>MPages</em>: View Builder (opened from Bedrock.exe),
+                    create a new Workflow view and add the Fusion Workflow
+                    Custom Components to the view, or add the Fusion Workflow
+                    Custom Components to an existing view.
+                </li>
+                <li>
+                    In <em>MPages</em>: ViewPoint Setup (opened from
+                    Bedrock.exe), add the view to your ViewPoint.
+                </li>
+                <li>
+                    In <em>MPages</em>: <em>MPages</em> Setup (opened from
+                    Bedrock.exe), configure the custom components in the view.
+                </li>
+            </ol>
+            <p>
+                See
+                <a href="https://wiki.cerner.com/x/c7S-X"
+                    >Configure <em>MPages</em> Views</a
+                >
+                for more information.
+            </p>
+            <p>
+                The following filter means are used for the custom components in
+                <em>Bedrock</em> and will be used later during the configuration
+                process:
+            </p>
+            <pre><code class="hljs text">    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_1</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_2</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_3</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_4</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_5</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_6</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_7</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_8</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_9</span>
+    FUSIO<span class="hljs-symbol">N_CUSTOM_COMP_10</span></code></pre>
+            <h2 id="using-gaia-for-custom-components">
+                Using Gaia for Custom Components
+            </h2>
+            <p>
+                Extract the compressed file within <code>template/</code> folder
+                into your project directory to begin working on your component.
+                This template acts as the base for your component.
+            </p>
+            <h3 id="install-and-configure-gaia">Install and Configure Gaia</h3>
+            <p>
+                Complete the steps in the following sections to set up the
+                development environment:
+            </p>
+            <h4 id="install-gaia">Install Gaia</h4>
+            <p>
+                Complete the following steps to install Gaia for use with custom
+                components:
+            </p>
+            <ol>
+                <li>
+                    Ensure you have completed the software prerequisites for
+                    <em>MPages</em> Gaia. See
+                    <a
+                        href="https://wiki.cerner.com/pages/releaseview.action?spaceKey=reference&amp;title=Install+MPages+Gaia#InstallMPagesGaia-SoftwarePrerequisites"
+                        >Software Prerequisites</a
+                    >
+                    for more information.
+                </li>
+                <li>
+                    Replace <code>&lt;TOKEN_ID&gt;</code> with your
+                    <em>MPages</em> Gaia TOKEN_ID in the
+                    <code>package.json</code> for <code>mpage-gaia</code> and
+                    <code>gaia-preset-public</code> in
+                    <code>devDependencies</code>
+                </li>
+                <li>Run <code>npm install</code></li>
+                <li>Run <code>npm run gaia server</code></li>
+                <li>
+                    Navigate to
+                    <a href="http://localhost:9001/app"
+                        >http://localhost:9001/app</a
+                    >
+                </li>
+            </ol>
+            <h4 id="configure-gaia">Configure Gaia</h4>
+            <p>
+                See the associated <code>Help</code> link in each Gaia tab for
+                more information. Complete the following steps to configure Gaia
+                for use with custom components:
+            </p>
+            <ol>
+                <li>
+                    In the <code>Live Dev</code> tab, add your static content
+                    location.
+                </li>
+                <li>
+                    Add the appropriate CCL program. In most cases, this is
+                    <code>mp_unified_driver</code>.
+                </li>
+                <li>
+                    Click <code>Param Parser</code> to generate the program
+                    parameters.
+                </li>
+                <li>Select <code>Enable Webpack</code>.</li>
+                <li>Select <code>Enable Auto-Refresh</code>.</li>
+                <li>
+                    Ensure that the Webpack Target is set to <code>dev</code>.
+                </li>
+                <li>
+                    Click <code>Save Configuration</code> and click
+                    <code>Launch</code>.
+                </li>
+            </ol>
+            <h3 id="replace-the-source-code">Replace the Source Code</h3>
+            <p>
+                Before developing your custom component, you must replace all
+                occurrences of <code>MPagesFusionCustomComponent</code> with
+                your component namespace in the following areas:
+            </p>
+            <ul>
+                <li>File names</li>
+                <li>Class names</li>
+                <li>Constants</li>
+                <li>Identifier in <code>package.json</code></li>
+                <li>Entry points in <code>gaia.json</code></li>
+            </ul>
+            <p>
+                <strong>Note:</strong> If you need to include multiple
+                components within <code>custom-components.js</code> include an
+                <code>index.js</code> provided with this template and use that
+                file as the entry point in your <code>gaia.json</code> instead.
+            </p>
+            <h4 id="using-options-property-from-bedrock">
+                Using <code>Options</code> property from <em>Bedrock</em>
+            </h4>
+            <p>
+                Because you determine the component’s <em>Bedrock</em> settings,
+                you do not need to depend on the
+                <code>Namespace</code> property. However, the
+                <code>FREE_TEXT</code> option is still available for providing
+                values into the code from <em>Bedrock</em>. Use the
+                <code>Options</code> property by defining the constant in your
+                <code>MPagesFusionCustomComponentConstants.js</code> file and
+                referencing it in your code according to the following example:
+            </p>
+            <pre><code class="hljs javascript"><span class="hljs-comment">// Bedrock Options property has "optionsObjectPrimary"</span>
+<span class="hljs-comment">// In your MPagesFusionCustomComponentConstants.js you will have:</span>
+const CUSTOM_COMPONENT_OPTIONS = {
+    optionsObjectPrimary: {
+      <span class="hljs-comment">// ... Omitted for brevity</span>
+    },
+    optionsObjectSecondary: {
+      <span class="hljs-comment">// ... Omitted for brevity</span>
+    }
+};
+
+<span class="hljs-comment">// In your source code MPagesFusionCustomComponent.js you will have:</span>
+
+<span class="hljs-comment">// Get Bedrock values</span>
+loadFilterMappings() {
+    <span class="hljs-keyword">this</span>.addFilterMappingObject(<span class="hljs-string">"FUSION_CUSTOM_COMP_OBJ_1"</span>, {
+        setFunction: <span class="hljs-keyword">this</span>.setFilterOptions,
+        type: <span class="hljs-string">"STRING"</span>,
+        field: <span class="hljs-string">"FREETEXT_DESC"</span>
+    });
+}
+
+<span class="hljs-comment">// Set the Bedrock values</span>
+setFilterOptions(options) {
+    <span class="hljs-keyword">this</span>._state.options = options;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+
+<span class="hljs-comment">// Get the values from different "Options"</span>
+
+const referencedData = CUSTOM_COMPONENT_OPTIONS[<span class="hljs-keyword">this</span>._state.options].<span class="hljs-keyword">data</span>;
+</code></pre>
+            <h4 id="deploying-the-component-to-the-domain">
+                Deploying the Component to the Domain
+            </h4>
+            <p>
+                Run <code>npm run build</code> in the command line while at the
+                component root to create the final compiled component file. This
+                creates a new <code>dist/</code> folder in your component with
+                the <code>MPagesFusionCustomComponent.js</code> and
+                <code>MPagesFusionCustomComponent.css</code> files. You can add
+                the source code in these files into your
+                <code>custom-components.js</code> and
+                <code>custom-components.css</code> files respectively.
+            </p>
+            <h2 id="additional-resources">Additional Resources</h2>
+            <ul>
+                <li>
+                    <a href="./resources/banner.html">Banners</a> for
+                    information about adding and removing banners in a Fusion
+                    component
+                </li>
+                <li>
+                    <a href="./resources/retrieving-data.html"
+                        >Data Retrieval</a
+                    >
+                </li>
+                <li>
+                    <a href="./resources/detail-panel.html">Detail Panel</a> for
+                    information about managing interactions between multiple
+                    components
+                </li>
+                <li><a href="./resources/fusion.html">Importing Fusion</a></li>
+                <li>
+                    <a href="./resources/lifecycle.html">Lifecycle Functions</a>
+                </li>
+                <li>
+                    <a href="./resources/styling-guide.html"
+                        >Styling Guidelines</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

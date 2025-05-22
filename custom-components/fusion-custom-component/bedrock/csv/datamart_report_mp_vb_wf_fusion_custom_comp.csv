@@ -1,0 +1,11 @@
+topic_mean,report_mean,report_display,sequence,lighthouse_goal,mpage_pos,mpage_seq,mp_label,mp_nbr_label,mp_link,mp_add_label,mp_exp_collapse,mp_lookback,mp_max_results,mp_scrolling,mp_date_format,mp_truncate,mp_default,conditional_section
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_1,Workflow Fusion Custom Component 1,1,,Left,1,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_2,Workflow Fusion Custom Component 2,2,,Left,2,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_3,Workflow Fusion Custom Component 3,3,,Left,3,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_4,Workflow Fusion Custom Component 4,4,,Left,4,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_5,Workflow Fusion Custom Component 5,5,,Left,5,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_6,Workflow Fusion Custom Component 6,6,,Left,6,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_7,Workflow Fusion Custom Component 7,7,,Left,7,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_8,Workflow Fusion Custom Component 8,8,,Left,8,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_9,Workflow Fusion Custom Component 9,9,,Left,9,yes,no,yes,yes,no,no,no,no,no,no,OFF,
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_10,Workflow Fusion Custom Component 10,10,,Left,10,yes,no,yes,yes,no,no,no,no,no,no,OFF,

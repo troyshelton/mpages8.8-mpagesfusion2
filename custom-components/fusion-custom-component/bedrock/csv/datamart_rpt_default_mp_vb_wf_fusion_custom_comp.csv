@@ -1,0 +1,31 @@
+topic_mean,report_mean,filter_mean,mp_param_mean,report_display,default_value,notes
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_1,mp_sect_params,mp_label,Workflow Fusion Custom Component 1,Workflow Fusion Custom Component 1,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_2,mp_sect_params,mp_label,Workflow Fusion Custom Component 2,Workflow Fusion Custom Component 2,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_3,mp_sect_params,mp_label,Workflow Fusion Custom Component 3,Workflow Fusion Custom Component 3,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_4,mp_sect_params,mp_label,Workflow Fusion Custom Component 4,Workflow Fusion Custom Component 4,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_5,mp_sect_params,mp_label,Workflow Fusion Custom Component 5,Workflow Fusion Custom Component 5,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_6,mp_sect_params,mp_label,Workflow Fusion Custom Component 6,Workflow Fusion Custom Component 6,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_7,mp_sect_params,mp_label,Workflow Fusion Custom Component 7,Workflow Fusion Custom Component 7,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_8,mp_sect_params,mp_label,Workflow Fusion Custom Component 8,Workflow Fusion Custom Component 8,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_9,mp_sect_params,mp_label,Workflow Fusion Custom Component 9,Workflow Fusion Custom Component 9,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_10,mp_sect_params,mp_label,Workflow Fusion Custom Component 10,Workflow Fusion Custom Component 10,Freetext up to 40 characters
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_1,mp_sect_params,mp_link,Workflow Fusion Custom Component 1,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_2,mp_sect_params,mp_link,Workflow Fusion Custom Component 2,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_3,mp_sect_params,mp_link,Workflow Fusion Custom Component 3,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_4,mp_sect_params,mp_link,Workflow Fusion Custom Component 4,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_5,mp_sect_params,mp_link,Workflow Fusion Custom Component 5,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_6,mp_sect_params,mp_link,Workflow Fusion Custom Component 6,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_7,mp_sect_params,mp_link,Workflow Fusion Custom Component 7,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_8,mp_sect_params,mp_link,Workflow Fusion Custom Component 8,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_9,mp_sect_params,mp_link,Workflow Fusion Custom Component 9,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_10,mp_sect_params,mp_link,Workflow Fusion Custom Component 10,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_1,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 1,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_2,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 2,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_3,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 3,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_4,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 4,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_5,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 5,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_6,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 6,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_7,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 7,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_8,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 8,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_9,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 9,Yes,Yes or No
+mp_vb_wf_fusion_custom_comp,mp_vb_wf_fusion_custom_comp_10,mp_sect_params,mp_add_label,Workflow Fusion Custom Component 10,Yes,Yes or No
